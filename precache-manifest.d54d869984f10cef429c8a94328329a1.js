@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e3f2205c7562b4c6722bf41b1a5d25fe",
+    "revision": "37102932423ad4884fe1d5cd933baa74",
     "url": "/StarWarBot/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/StarWarBot/static/css/2.eb45ad44.chunk.css"
   },
   {
-    "revision": "a4b4bca772ebd5665a8d",
+    "revision": "c3f3007dbd128b2b5c27",
     "url": "/StarWarBot/static/css/main.9d3cfe72.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/StarWarBot/static/js/2.79fbd333.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a4b4bca772ebd5665a8d",
-    "url": "/StarWarBot/static/js/main.eb5ef81a.chunk.js"
+    "revision": "c3f3007dbd128b2b5c27",
+    "url": "/StarWarBot/static/js/main.30544b32.chunk.js"
   },
   {
     "revision": "4262d10948fc97ffb534",
