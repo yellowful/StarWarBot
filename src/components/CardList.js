@@ -6,11 +6,11 @@ const CardList = ({robots}) => {
     // if(true){
     //     throw new Error('Noooooo')
     // }
-
+    //如果robots還沒有資料，就顯示loading
     if (!robots.length){
         return<h1 className = 'tc'>Loading</h1>
     } else{        
-//        debugger;
+        //如果robots有資料了，就把每個component回傳到cardComponent
         const cardComponent = robots.map(
             (items) => {
                 return (
@@ -18,7 +18,7 @@ const CardList = ({robots}) => {
                 )
             }
         )
-
+            //把cardComponent畫出來
             return (
                 <div>
                     {cardComponent}

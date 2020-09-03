@@ -20,26 +20,30 @@ constructor(){
 //App載入後，第一個執行的流程
 componentDidMount(){
     let randomArray = [];
-    //產生10個亂數
+    //star war人物共88位，從中產生10個亂數
     for(let i=0;i<10;i++){
         let randomNumber = Math.floor(Math.random()*88);
         if (!randomArray.includes(randomNumber)){
             randomArray.push(randomNumber);
         }
     }
-    //抓這10個亂數的Star War的人物
+    //抓出10個亂數的Star War的人物
     const getData = async (randomArray) => {
         let randomRobots = [];    
         for await (let randomNumber of randomArray){
-                let promiseFetch = await fetch(`https://swapi.co/api/people/${randomNumber}/`);
+                let promiseFetch = await fetch(`https://swapi.dev/api/people/${randomNumber}/`);
                 let temp = await promiseFetch.json();
                 temp.id = randomNumber.toString()
+                //把抓回來的人物資料加上id
                 randomRobots.push(await temp);
+
         }
-        this.setState({allRobots:randomRobots});
-        //allRobots在這一行被更新
+        this.setState({allRobots:randomRobots.concat()});
+        //allRobots在這一行被更新，
+        //用.concat()才不會之後不小心動到randomRobots的時候，
+        //因為pass by reference而去動到this.state
     }
-    //執行
+    //執行，執行完this.state.allRobots會設定10隻亂數角色
     getData(randomArray);
 
 }
@@ -49,9 +53,11 @@ onSearchChange = (event) => {
     //必須要用arrow function這個ES6的語法
     //否則this不會被正確bind住，會是undefined
     let searchData = async (searchfield)=>{
-        const promiseFetch = await fetch(`https://swapi.co/api/people/?search=${searchfield}`);
+        const promiseFetch = await fetch(`https://swapi.dev/api/people/?search=${searchfield}`);
         let temp = await promiseFetch.json();
+        //抓回來的一群資料放到results裡
         const {results} = await temp;
+        //把資料加上id
         for await (let result of results){
             result.id = await result.url.split('/')[5];
         }
@@ -61,7 +67,7 @@ onSearchChange = (event) => {
         //放這裏的話，this.setState就會等results更新時，才更新allRobots
         this.setState({allRobots:results});
     }
-    //鍵盤發生敲擊時，回傳的event會傳入
+    //鍵盤發生敲擊時，回傳的event會傳入，然後更新allRobots
     searchData(event.target.value);
 }
 

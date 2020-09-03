@@ -1,5 +1,6 @@
 import React from 'react'
 
+//把searchChange function傳下來了，onChange代表search box如有改變，就會render()。
 const SearchBox = ({searchChange}) => {
     return(
         <div>
