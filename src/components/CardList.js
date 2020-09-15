@@ -12,9 +12,9 @@ const CardList = ({robots}) => {
     } else{        
         //如果robots有資料了，就把每個component回傳到cardComponent
         const cardComponent = robots.map(
-            (items) => {
+            (item) => {
                 return (
-                    <Card key={items.id} id={items.id} name={items.name} height={items.height} mass={items.mass}/>
+                    <Card robot={item}/>
                 )
             }
         )
