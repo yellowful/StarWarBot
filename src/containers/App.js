@@ -5,7 +5,7 @@ import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundry';
 import './App.css';
-import {requestSwapi} from '../actions';
+import {requestRandomSwapi,requestSearchSwapi} from '../actions';
 import {connect} from 'react-redux';
 
 const mapStatesToProps = (state) => ({
@@ -15,7 +15,10 @@ const mapStatesToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch)=>{
-    return {onRequestSwapi:(randomArray)=>dispatch(requestSwapi(randomArray))}   
+    return {
+        onRequestRandomSwapi:(randomArray)=>dispatch(requestRandomSwapi(randomArray)),
+        onSearchChange:(event)=>dispatch(requestSearchSwapi(event.target.value))
+    }   
 }
 
 
@@ -34,38 +37,12 @@ class App extends Component {
             }
         }
         //抓出10個亂數的Star War的人物
-        this.props.onRequestSwapi(randomArray);
+        this.props.onRequestRandomSwapi(randomArray);
     }
-
-    //鍵盤打字時要執行的，這是自行定義的名稱
-    onSearchChange = (event) => {
-        //鍵盤發生敲擊時，回傳的event會傳入，然後更新allRobots
-        //this.searchData(event.target.value);
-        console.log(event.target.value);
-    }   
-
-    //必須要用arrow function這個ES6的語法
-    //否則this不會被正確bind住，會是undefined
-    // searchData = async (searchField)=>{
-    //     const promiseFetch = await fetch(`https://swapi.dev/api/people/?search=${searchField}`);
-    //     let temp = await promiseFetch.json();
-    //     //抓回來的一群資料放到results裡
-    //     const {results} = await temp;
-    //     //把資料加上id
-    //     for await (let result of results){
-    //         result.id = await result.url.split('/')[5];
-    //     }
-    //     //這行必須放在async裡面，才會被正確的執行
-    //     //因為results是個promise，所以this.setState如果放在async外面，接受searchData所return的result
-    //     //將會更新為一個promise，不會再管result是不是會再更新了
-    //     //放這裏的話，this.setState就會等results更新時，才更新allRobots
-    //     //console.log('searchData',searchField,results);
-    //     this.setState({allRobots:results});
-    // }
 
     render(){
         //當this.setState更新的時候，會重新render，allRobots就會被更新
-        const { allRobots,isPending } = this.props;
+        const { allRobots,isPending,onSearchChange } = this.props;
         //console.log('render',this.props);
                 return(
                     <div className='tc'>
@@ -77,7 +54,7 @@ class App extends Component {
                         這裡所有的this都是指App的instance
                         (class App產生的object)。
                         */}
-                        <SearchBox searchChange = {this.onSearchChange}/>
+                        <SearchBox searchChange = {onSearchChange}/>
                         {/* 利用定義這個component，讓children有捲軸的功能 */}
                         <Scroll>
                             {/* 利用這個component有定義componentDidCatch()，來顯示children的錯誤訊息 */}
