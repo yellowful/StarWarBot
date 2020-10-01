@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/StarWarBot/static/css/main.9d3cfe72.chunk.css",
-    "main.js": "/StarWarBot/static/js/main.5e0e5a58.chunk.js",
-    "main.js.map": "/StarWarBot/static/js/main.5e0e5a58.chunk.js.map",
-    "runtime-main.js": "/StarWarBot/static/js/runtime-main.d08024af.js",
-    "runtime-main.js.map": "/StarWarBot/static/js/runtime-main.d08024af.js.map",
-    "static/css/2.eb45ad44.chunk.css": "/StarWarBot/static/css/2.eb45ad44.chunk.css",
-    "static/js/2.79fbd333.chunk.js": "/StarWarBot/static/js/2.79fbd333.chunk.js",
-    "static/js/2.79fbd333.chunk.js.map": "/StarWarBot/static/js/2.79fbd333.chunk.js.map",
+    "main.css": "/StarWarBot/static/css/main.b700c74f.chunk.css",
+    "main.js": "/StarWarBot/static/js/main.a58b143b.chunk.js",
+    "main.js.map": "/StarWarBot/static/js/main.a58b143b.chunk.js.map",
+    "runtime-main.js": "/StarWarBot/static/js/runtime-main.c71d57f3.js",
+    "runtime-main.js.map": "/StarWarBot/static/js/runtime-main.c71d57f3.js.map",
+    "static/css/2.3b6f1bda.chunk.css": "/StarWarBot/static/css/2.3b6f1bda.chunk.css",
+    "static/js/2.cd6f744b.chunk.js": "/StarWarBot/static/js/2.cd6f744b.chunk.js",
+    "static/js/2.cd6f744b.chunk.js.map": "/StarWarBot/static/js/2.cd6f744b.chunk.js.map",
     "index.html": "/StarWarBot/index.html",
-    "precache-manifest.c21c72ab1dc231780f3c42b580d86713.js": "/StarWarBot/precache-manifest.c21c72ab1dc231780f3c42b580d86713.js",
+    "precache-manifest.a5f8849abbf559f7a346478491f9cdb6.js": "/StarWarBot/precache-manifest.a5f8849abbf559f7a346478491f9cdb6.js",
     "service-worker.js": "/StarWarBot/service-worker.js",
-    "static/css/2.eb45ad44.chunk.css.map": "/StarWarBot/static/css/2.eb45ad44.chunk.css.map",
-    "static/css/main.9d3cfe72.chunk.css.map": "/StarWarBot/static/css/main.9d3cfe72.chunk.css.map",
-    "static/js/2.79fbd333.chunk.js.LICENSE.txt": "/StarWarBot/static/js/2.79fbd333.chunk.js.LICENSE.txt",
+    "static/css/2.3b6f1bda.chunk.css.map": "/StarWarBot/static/css/2.3b6f1bda.chunk.css.map",
+    "static/css/main.b700c74f.chunk.css.map": "/StarWarBot/static/css/main.b700c74f.chunk.css.map",
+    "static/js/2.cd6f744b.chunk.js.LICENSE.txt": "/StarWarBot/static/js/2.cd6f744b.chunk.js.LICENSE.txt",
     "static/media/App.css": "/StarWarBot/static/media/SWATRG__.48ccec71.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.d08024af.js",
-    "static/css/2.eb45ad44.chunk.css",
-    "static/js/2.79fbd333.chunk.js",
-    "static/css/main.9d3cfe72.chunk.css",
-    "static/js/main.5e0e5a58.chunk.js"
+    "static/js/runtime-main.c71d57f3.js",
+    "static/css/2.3b6f1bda.chunk.css",
+    "static/js/2.cd6f744b.chunk.js",
+    "static/css/main.b700c74f.chunk.css",
+    "static/js/main.a58b143b.chunk.js"
   ]
 }
